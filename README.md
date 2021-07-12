@@ -5,6 +5,8 @@ Infrastructure Coding Test
    The script creates: EC2 instance,Security group, Internet gateway. Route table and association,Public subnet,ELB
    Copy the version file to the running ec2 instance
    scp -i "my-key" ./version.txt ec2-user@<public_ip>/.
+   Or copy it from the s3 bucket created
+   aws s3 cp s3://jose33/version.txt version.txt
 2. Now scp into the ec2 instance 
    chmod 400 my-key
    ssh -i "my-key" ec2-user@<public_ip>
