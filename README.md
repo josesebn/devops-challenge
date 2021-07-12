@@ -8,5 +8,6 @@ Infrastructure Coding Test
    chmod 400 my-key
    ssh -i "my-key" ec2-user@<public_ip>
    ssh works fine!
-3. Run the runCheck.txt
+3. To see the public page open the public DNS name from the ec2 instance created.
+4. Run the runCheck.txt
    
