@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ca-central-1"
+  region = "us-east-1"
   access_key = "AKIAVWUN5TJ544FJE2KT"
   secret_key = "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"
 }
@@ -27,7 +27,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_subnet" "subnet-1" {
   vpc_id = aws_vpc.webserver-vpc.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "ca-central-1a"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "webserver_subnet1"
@@ -162,7 +162,7 @@ resource "aws_elb" "elbWeb" {
 resource "aws_instance" "web_server_instance" {
   ami = "ami-0db72f413fc1ddb2a"
   instance_type = "t2.nano"
-  availability_zone = "ca-central-1a"
+  availability_zone = "us-east-1a"
   subnet_id = aws_subnet.subnet-1.id
   vpc_security_group_ids = [aws_security_group.allow_web.id]
   key_name          = "my-key"
