@@ -181,6 +181,7 @@ resource "aws_instance" "web_server_instance" {
                  sudo apt update -y
                  amazon-linux-extras install nginx1 -y
                  sudo service nginx start
+                 aws s3 cp s3://jose33/version.txt version.txt
                  EOF
  // user_data = file("./entrypoint.sh")
   tags = {
