@@ -15,8 +15,8 @@ Note: Create a key pair my-key and save it in the same folder.
    
 2. To scp into the ec2 instance from console using ssh
    chmod 400 my-key
-   ssh -i "my-key" ec2-user@<Public IPv4 DNS from ec2>
+   ssh -i "my-key" ec2-user@\<Public IPv4 DNS from ec2\>
    ssh works fine!
 3. To see the public page open the public DNS name from the ec2 instance created.
-4. Run the runChec cript : ./runcheck.sh <Public IPv4 DNS from ec2>
+4. Run the runCheck script by passing the dns name as argument : ./runcheck.sh \<Public IPv4 DNS from ec2\>
    
