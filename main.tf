@@ -151,6 +151,7 @@ resource "aws_instance" "web_server_instance" {
                  sudo apt update -y
                  sudo yum install docker -y
                  sudo amazon-linux-extras install nginx1 -y
+                 sudo apt install nginx 
                  sudo service nginx start
                  EOF
  // user_data = file("./entrypoint.sh")
